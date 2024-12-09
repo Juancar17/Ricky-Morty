@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick and Morty</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container1">
+        <h1>Rick and Morty API</h1>
+        <input type="text" placeholder="Search.." class="form-control">
+        <button class="btnBuscarSolo">Buscar Personajes</button>
+        <button class="btnBuscar">Buscar Todos Personajes</button>
+        <button class="btnBuscarEpisodios">Buscar Episodios</button>
+        <div class="btnS">
+            <button class="btnNext">Siguiente Personaje</button>
+            <button class="btnAnterior">Personaje anterior</button>
+            <div class="btnS-Episodes"></div>
+                <button class="btnNext-Episodes">Siguiente </button>
+                <button class="btnPrevious-Episodes">Anterior</button>
+        </div>
+    </div>
+    <div class="personajes-container"></div>
+    <div class="container"></div>
+    <!-- Modal de Bootstrap -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Detalles del Personaje</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Contenido dinámico aquí...</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js.js"></script>
+</body>
+</html>
+
+

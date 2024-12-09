@@ -1,0 +1,271 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    color-scheme: dark;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.container1 {
+    display: grid;
+    place-content: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5em;
+    margin-top: 4em;
+    padding: 1em;
+}
+
+.card-episodio-card, .card {
+    border: 1px solid #444;
+    border-radius: 12px;
+    background-color: #1e1e1e;
+    padding: 1.5em;
+    text-align: center;
+    width: 200px;
+    max-width: 300px;
+    min-width: 150px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-episodio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.card p {
+    margin: 0.5em 0;
+    font-size: 0.9em;
+}
+
+.btnBuscar, .btnBuscarEpisodios, .btnBuscarSolo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 12px;
+    gap: 10px; /* Espaciado entre botones */
+}
+
+button, .btnAnterior, .btnAnterior {
+    height: 2.5em;
+    padding: 0.5em 1.5em;
+    border: none;
+    border-radius: 8px;
+    background-color: #444; /* Fondo de botón */
+    color: #fff; /* Color del texto */
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: none;
+}
+
+button:hover {
+    background-color: #666; /* Cambio de color en hover */
+    transform: scale(1.05); /* Efecto de zoom */
+}
+
+
+
+/* Fondo oscuro semi-transparente */
+.modal {
+    background-color: rgba(0, 0, 0, 0.7); /* Oscurece el fondo al abrir el modal */
+}
+
+.modal-dialog {
+    margin-top: 10%;
+    width: 90%; /* Ancho máximo del modal */
+    max-width: 500px; /* Límite para dispositivos grandes */
+    border-radius: 12px;
+    overflow: hidden; /* Para evitar desbordes */
+}
+
+.modal-content {
+    background-color: #1e1e1e; /* Fondo oscuro del modal */
+    color: #ffffff; /* Texto blanco */
+    border: 1px solid #444; /* Borde sutil */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para destacar */
+}
+
+.modal-header {
+    background-color: #333; /* Encabezado ligeramente más oscuro */
+    border-bottom: 1px solid #555;
+    text-align: center;
+}
+
+.modal-header .modal-title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.modal-header .btn-close {
+    color: #fff; /* Icono de cerrar blanco */
+    opacity: 1;
+}
+
+.modal-body {
+    padding: 1.5em;
+    text-align: center;
+}
+
+.modal-body img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain; /* Ajustar imagen sin deformarla */
+    border-radius: 8px; /* Bordes redondeados */
+    margin-top: 1em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.modal-footer {
+    background-color: #333;
+    border-top: 1px solid #555;
+    display: flex;
+    justify-content: center;
+}
+
+.modal-footer .btn {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.modal-footer .btn:hover {
+    background-color: #666;
+    transform: scale(1.05);
+}
+
+/* Contenedor principal de personajes */
+.personajes-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite ajuste automático a nuevas líneas */
+    justify-content: center;
+    gap: 1em;
+    margin-top: 2em;
+    padding: 2em;
+    border-top: 2px solid #444;
+    background-color: #1e1e1e; /* Fondo oscuro */
+    border-radius: 12px;
+    margin: 2em 39em;
+}
+
+/* Tarjeta individual del personaje */
+.personaje-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2a2a2a;
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 10px;
+    padding: 1em;
+    width: 150px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.personaje-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 0.5em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.personaje-card p {
+    margin: 0;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+/* Efecto Hover */
+.personaje-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+}
+
+/* Ajuste responsive */
+@media (max-width: 768px) {
+    .personaje-card {
+        width: 120px; /* Tamaño reducido en pantallas pequeñas */
+    }
+}
+
+
+/* Estilo para la información del episodio */
+.card-h {
+    background-color: #1e1e1e;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    margin-bottom: 1.5em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Contenedor de personajes en grid */
+.personajes-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+    justify-content: center;
+}
+
+/* Tarjeta individual de personaje */
+.personaje-card {
+    background-color: #2a2a2a;
+    color: #fff;
+    border-radius: 8px;
+    text-align: center;
+    width: 150px;
+    padding: 1em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease;
+}
+
+.personaje-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 0.5em;
+}
+
+.personaje-card:hover {
+    transform: translateY(-5px);
+}
+
+.container .btnNext-Episodes{
+    display: block;
+}
+
+.btnNext-Episodes, .btnPrevious-Episodes{
+    display: none;
+}
